@@ -1,0 +1,11 @@
+Use Putty to connect to THOR
+
+Log into cs.uml.edu:
+
+cs.uml.edu is 
+mdemoy@cs.uml.edu
+password is a bunch of numbers
+
+then type:
+ssh thor.uml.edu
+20Sep2018

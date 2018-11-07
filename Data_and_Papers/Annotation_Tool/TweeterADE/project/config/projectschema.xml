@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eHOST_Project_Configure Version="1.0">
+    <Handling_Text_Database>false</Handling_Text_Database>
+    <OracleFunction_Enabled>false</OracleFunction_Enabled>
+    <AttributeEditor_PopUp_Enabled>false</AttributeEditor_PopUp_Enabled>
+    <OracleFunction>true</OracleFunction>
+    <AnnotationBuilder_Using_ExactSpan>false</AnnotationBuilder_Using_ExactSpan>
+    <OracleFunction_Using_WholeWord>true</OracleFunction_Using_WholeWord>
+    <GraphicAnnotationPath_Enabled>true</GraphicAnnotationPath_Enabled>
+    <Diff_Indicator_Enabled>true</Diff_Indicator_Enabled>
+    <Diff_Indicator_Check_CrossSpan>true</Diff_Indicator_Check_CrossSpan>
+    <Diff_Indicator_Check_Overlaps>false</Diff_Indicator_Check_Overlaps>
+    <StopWords_Enabled>false</StopWords_Enabled>
+    <Output_VerifySuggestions>false</Output_VerifySuggestions>
+    <Pre_Defined_Dictionary_DifferentWeight>false</Pre_Defined_Dictionary_DifferentWeight>
+    <PreAnnotated_Dictionaries Owner="NLP_Assistant" />
+    <attributeDefs />
+    <Relationship_Rules>
+        <Relationship_Rule>
+            <Name>ADE_BleedingAnatomicSite</Name>
+            <Definition>((ADE))((BleedingAnatomicSite))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>ADE_Severity</Name>
+            <Definition>((ADE))((Severity))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>BleedingLabEval_Severity</Name>
+            <Definition>((BleedingLabEval))((Severity))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Bleeding_BleedingAnatomicSite</Name>
+            <Definition>((Bleeding))((BleedingAnatomicSite))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Bleeding_Severity</Name>
+            <Definition>((Bleeding))((Severity))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Drug_ADE</Name>
+            <Definition>((Drug))((ADE))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Drug_Dose</Name>
+            <Definition>((Drug))((Dose))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Drug_Duration</Name>
+            <Definition>((Drug))((Duration))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Drug_Frequency</Name>
+            <Definition>((Drug))((Frequency))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Drug_Indication</Name>
+            <Definition>((Drug))((Indication))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Drug_Route</Name>
+            <Definition>((Drug))((Route))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Indication_BleedingAnatomicSite</Name>
+            <Definition>((Indication))((BleedingAnatomicSite))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>Indication_Severity</Name>
+            <Definition>((Indication))((Severity))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+        <Relationship_Rule>
+            <Name>SSLIF_Severity</Name>
+            <Definition>((SSLIF))((Severity))</Definition>
+            <attributeDefs />
+        </Relationship_Rule>
+    </Relationship_Rules>
+    <classDefs>
+        <classDef>
+            <Name>ADE</Name>
+            <RGB_R>255</RGB_R>
+            <RGB_G>0</RGB_G>
+            <RGB_B>0</RGB_B>
+            <InHerit_Public_Attributes>false</InHerit_Public_Attributes>
+            <attributeDef>
+                <Name>period</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Current</attributeDefOptionDef>
+                <attributeDefOptionDef>History</attributeDefOptionDef>
+                <attributeDefOptionDef>Unknown</attributeDefOptionDef>
+                <attributeDefOptionDef>Future</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>presence</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Present</attributeDefOptionDef>
+                <attributeDefOptionDef>Absent</attributeDefOptionDef>
+                <attributeDefOptionDef>Possible</attributeDefOptionDef>
+                <attributeDefOptionDef>Conditional</attributeDefOptionDef>
+                <attributeDefOptionDef>Hypothetical</attributeDefOptionDef>
+                <attributeDefOptionDef>Not associated with Patient</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>outcome</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Not Mentioned</attributeDefOptionDef>
+                <attributeDefOptionDef>Recovered</attributeDefOptionDef>
+                <attributeDefOptionDef>Not Completely Recovered</attributeDefOptionDef>
+                <attributeDefOptionDef>Died</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>MedDRA code</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>Not set</defaultValue>
+                <attributeDefOptionDef>Not set</attributeDefOptionDef>
+                <attributeDefOptionDef>Code not found</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>MedDRA term</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>Not set</defaultValue>
+                <attributeDefOptionDef>Not set</attributeDefOptionDef>
+                <attributeDefOptionDef>Term not found</attributeDefOptionDef>
+            </attributeDef>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Indication</Name>
+            <RGB_R>192</RGB_R>
+            <RGB_G>128</RGB_G>
+            <RGB_B>255</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <attributeDef>
+                <Name>period</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Current</attributeDefOptionDef>
+                <attributeDefOptionDef>History</attributeDefOptionDef>
+                <attributeDefOptionDef>Unknown</attributeDefOptionDef>
+                <attributeDefOptionDef>Future</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>presence</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Present</attributeDefOptionDef>
+                <attributeDefOptionDef>Absent</attributeDefOptionDef>
+                <attributeDefOptionDef>Possible</attributeDefOptionDef>
+                <attributeDefOptionDef>Conditional</attributeDefOptionDef>
+                <attributeDefOptionDef>Hypothetical</attributeDefOptionDef>
+                <attributeDefOptionDef>Not associated with Patient</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>SNOMED code</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Code not found</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>SNOMED term</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Term not found</attributeDefOptionDef>
+            </attributeDef>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>SSLIF</Name>
+            <RGB_R>255</RGB_R>
+            <RGB_G>255</RGB_G>
+            <RGB_B>0</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <attributeDef>
+                <Name>SNOMED code</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Code not found</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>SNOMED term</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Term not found</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>Period</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>DNK</attributeDefOptionDef>
+                <attributeDefOptionDef>Future</attributeDefOptionDef>
+                <attributeDefOptionDef>History</attributeDefOptionDef>
+                <attributeDefOptionDef>Current</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>Presence</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>NAWP</attributeDefOptionDef>
+                <attributeDefOptionDef>Hypothetical</attributeDefOptionDef>
+                <attributeDefOptionDef>Conditional</attributeDefOptionDef>
+                <attributeDefOptionDef>Possible</attributeDefOptionDef>
+                <attributeDefOptionDef>Absent</attributeDefOptionDef>
+                <attributeDefOptionDef>Present</attributeDefOptionDef>
+            </attributeDef>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Severity</Name>
+            <RGB_R>210</RGB_R>
+            <RGB_G>192</RGB_G>
+            <RGB_B>133</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Drug</Name>
+            <RGB_R>0</RGB_R>
+            <RGB_G>255</RGB_G>
+            <RGB_B>0</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <attributeDef>
+                <Name>period</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Current</attributeDefOptionDef>
+                <attributeDefOptionDef>History</attributeDefOptionDef>
+                <attributeDefOptionDef>Unknown</attributeDefOptionDef>
+                <attributeDefOptionDef>Future</attributeDefOptionDef>
+            </attributeDef>
+            <attributeDef>
+                <Name>presence</Name>
+                <is_Linked_to_UMLS_CUICode_and_CUILabel>false</is_Linked_to_UMLS_CUICode_and_CUILabel>
+                <is_Linked_to_UMLS_CUICode>false</is_Linked_to_UMLS_CUICode>
+                <is_Linked_to_UMLS_CUILabel>false</is_Linked_to_UMLS_CUILabel>
+                <defaultValue>N/A</defaultValue>
+                <attributeDefOptionDef>N/A</attributeDefOptionDef>
+                <attributeDefOptionDef>Present</attributeDefOptionDef>
+                <attributeDefOptionDef>Absent</attributeDefOptionDef>
+                <attributeDefOptionDef>Possible</attributeDefOptionDef>
+                <attributeDefOptionDef>Conditional</attributeDefOptionDef>
+                <attributeDefOptionDef>Hypothetical</attributeDefOptionDef>
+                <attributeDefOptionDef>Not associated with Patient</attributeDefOptionDef>
+            </attributeDef>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Duration</Name>
+            <RGB_R>0</RGB_R>
+            <RGB_G>128</RGB_G>
+            <RGB_B>255</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Frequency</Name>
+            <RGB_R>255</RGB_R>
+            <RGB_G>140</RGB_G>
+            <RGB_B>0</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Route</Name>
+            <RGB_R>255</RGB_R>
+            <RGB_G>102</RGB_G>
+            <RGB_B>178</RGB_B>
+            <InHerit_Public_Attributes>true</InHerit_Public_Attributes>
+            <Source>eHOST</Source>
+        </classDef>
+        <classDef>
+            <Name>Dose</Name>
+            <RGB_R>0</RGB_R>
+            <RGB_G>255</RGB_G>
+            <RGB_B>255</RGB_B>
+            <InHerit_Public_Attributes>false</InHerit_Public_Attributes>
+            <Source>eHOST</Source>
+        </classDef>
+    </classDefs>
+    <ummsSchemaAdditions>
+        <annotationReport>
+            <orphanedAnnotations>
+                <classAndRelationship>
+                    <className>ADE</className>
+                    <relationshipName>Drug_ADE</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Dose</className>
+                    <relationshipName>Drug_Dose</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Duration</className>
+                    <relationshipName>Drug_Duration</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Frequency</className>
+                    <relationshipName>Drug_Frequency</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Route</className>
+                    <relationshipName>Drug_Route</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Indication</className>
+                    <relationshipName>Drug_Indication</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Severity</className>
+                    <relationshipName>Indication_Severity</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Severity</className>
+                    <relationshipName>SSLIF_Severity</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>BleedingAnatomicSite</className>
+                    <relationshipName>ADE_BleedingAnatomicSite</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Severity</className>
+                    <relationshipName>BleedingLabEval_Severity</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>BleedingAnatomicSite</className>
+                    <relationshipName>Bleeding_BleedingAnatomicSite</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>Severity</className>
+                    <relationshipName>Bleeding_Severity</relationshipName>
+                </classAndRelationship>
+                <classAndRelationship>
+                    <className>BleedingAnatomicSite</className>
+                    <relationshipName>Indication_BleedingAnatomicSite</relationshipName>
+                </classAndRelationship>
+            </orphanedAnnotations>
+            <annotationCountsByClass>
+                <classNames>
+                    <className>ADE</className>
+                    <className>Indication</className>
+                    <className>SSLIF</className>
+                    <className>Drug</className>
+                    <className>Bleeding</className>
+                    <className>BleedingLabEval</className>
+                    <className>BleedingAnatomicSite</className>
+                </classNames>
+            </annotationCountsByClass>
+        </annotationReport>
+    </ummsSchemaAdditions>
+</eHOST_Project_Configure>
+

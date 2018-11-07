@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="tweeter_data_fixed.txt">
+    <annotation>
+        <mention id="EHOST_Instance_10" />
+        <annotator id="eHOST_2010">Extensible_Human_Oracle_Suite_of_Tools</annotator>
+        <span start="45" end="50" />
+        <spannedText>Xanax</spannedText>
+        <creationDate>Mon Nov 05 10:54:38 EST 2018</creationDate>
+    </annotation>
+    <stringSlotMention id="EHOST_Instance_11">
+        <mentionSlot id="period" />
+        <stringSlotMentionValue value="N/A" />
+    </stringSlotMention>
+    <stringSlotMention id="EHOST_Instance_12">
+        <mentionSlot id="presence" />
+        <stringSlotMentionValue value="N/A" />
+    </stringSlotMention>
+    <classMention id="EHOST_Instance_10">
+        <hasSlotMention id="EHOST_Instance_11" />
+        <hasSlotMention id="EHOST_Instance_12" />
+        <mentionClass id="Drug">Xanax</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+
